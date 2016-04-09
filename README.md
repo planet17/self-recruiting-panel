@@ -11,6 +11,7 @@ Contents:
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
 5. [CONFIGURATION](#configuration)
+5.1 [Configuration of Database](#database)
 6. [Future changes](#future-changes)
 
 
@@ -27,7 +28,7 @@ MY PROJECT STRUCTURE (general)
       www/                  contains the entry script and Web resources      
 
 
-APPLICATION STRUCTURE
+APPLICATION STRUCTURES
 -------------------
 [Back to Contents](#contents)
     
@@ -141,7 +142,7 @@ CONFIGURATION
 -------------
 [Back to Contents](#contents)
 
-### Database
+### DATABASE
 
 Edit the file `config/db.php` with real data, for example:
 
