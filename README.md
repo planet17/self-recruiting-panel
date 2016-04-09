@@ -11,7 +11,7 @@ Contents:
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
 5. [CONFIGURATION](#configuration)
-5.1 [Configuration of Database](#database)
+5.1. [Configuration of Database](#database)
 6. [Future changes](#future-changes)
 
 
@@ -47,7 +47,7 @@ INSTALLATION:
 [Back to Contents](#contents)
 
 
-** 1) Create a dir where you want to create that project, on your taste. **
+* 1) Create a dir where you want to create that project, on your taste.
 
 
 2) Use composer for get project:
@@ -98,7 +98,7 @@ $ touch log/access.log|touch log/error.log
 ~~~
 
 
-6) Prepare your server.
+5) Prepare your server.
 Add domain to your host. I run my app at my local.
 I use it at my:
 
