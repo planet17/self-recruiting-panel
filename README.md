@@ -60,10 +60,12 @@ INSTALLATION:
 
 ### 1) Create a dir.
 [Back to Installation](#installation)
+
 Create a dir where you want to create that project, on your taste.
 
 ### 2) Get project by composer.
 [Back to Installation](#installation)
+
 Use composer for get project. If you do not have [Composer](http://getcomposer.org/), you may install it by following
 instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
@@ -85,6 +87,7 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 
 ### 3) Install VENDOR by composer.
 [Back to Installation](#installation)
+
 Install vendor or etc. with composer using the following command:
 
 
@@ -110,6 +113,7 @@ $ composer global update fxp/composer-asset-plugin --no-plugins
 
 ### 4) Create log files [optional].
 [Back to Installation](#installation)
+
 Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
 
@@ -121,20 +125,27 @@ $ touch log/access.log|touch log/error.log
 
 ### 5) Prepare server.
 [Back to Installation](#installation)
+
 Prepare your server. Add domain to your host. I run my app at my local.
 I use it at my:
 
 ~~~
-Ubuntu
+Ubuntu 14.04.4 LTS
 Server an Apache >= 2.4 or Nginx >= 1.4
 PHP >= 5.6
 ~~~
 
 So as example add domain to my hosts:
 
-
-
+~~~
 127.0.0.1	http://[domain.name]
+~~~
+
+Use following command:
+
+~~~
+$ sudo gedit /etc/hosts 
+~~~
 
 b) Example of my settings for Apache2:
 
@@ -151,31 +162,22 @@ b) Example of my settings for Apache2:
 
 * - About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
 
+I use single file for all my setting of apache. I almost sure what you use other way to configuration. So be care,
+cause you might to do other actions. But anyway for example (If you need it). I write sets from above to the file from
+the following command:
+
+~~~
+$ sudo gedit /etc/apache2/sites-enabled/000-default.conf
+~~~
+
+
+
+
 Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
 `www` directory.
 
 ~~~
 http://[domain.name]/
-~~~
-
-///////////////////////////////////////////////////////////////////////////////
-
-If you want change the name of directory application, its okay. Then you need
-1) Rename your directory in the /home/apps/[my_app_name]
-2) Change composer json so you need go:
-extra > yii\\composer\\Installer::postCreateProject > setPermission & generateCookieValidationKey
-and set new path at that
-
-1) Rename your directory
-2) Change composer json so you need go:
-extra > yii\\composer\\Installer::postCreateProject > setPermission & generateCookieValidationKey
-and set new path at that
-
-
-~~~
-$ composer -d=home/yii2 create-project --prefer-dist --stability=dev samdark/yii2-minimal .
-$ composer -d=home/yii2 install
-$ composer -d=home/yii2 update
 ~~~
 
 Now setting of permission don\'t work automatically, so you need using the following command:
@@ -205,12 +207,8 @@ return [
 ];
 ```
 
-**NOTES FROM ME:**
+**NOTES:**
 - All command work relatively to root-dir of project. I usually use terminal into my IDE, so I don't need to write a full path.
-- Into the apps only one application don't use the database. It is SamDark/Minimal 
-
-
-**NOTES FROM Sam Dark (Yii2):**
 - Yii won't create the database for you, this has to be done manually before you can access it.
 - Check and edit the other files in the `config/` directory to customize your application as required.
 
@@ -219,9 +217,7 @@ Future changes
 ================================
 [Back to Contents](#contents)
 
-1) I want do and very little module with my own helper, so I will remove myLittleHelper and do that like a 3rd party
-into yii2/vendor, and that actually will req. for composer.
-
+1) This item not from that projects.
 
 ================================
-[Back to Top](#self-recruiting-panel)
+[back to top](#self-recruiting-panel)
