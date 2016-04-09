@@ -6,13 +6,14 @@ Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Mi
 
 Contents:
 -------------------
-1. [PROJECT STRUCTURE](#myprojectstructure)
-2. [PROJECT STRUCTURE](#application structure)
+1. [PROJECT STRUCTURE](my-project-structure)
+2. [APPLICATION STRUCTURE](#application-structure)
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
 
 
-MY PROJECT STRUCTURE
+[Back to Contents](#contents)
+MY PROJECT STRUCTURE (general)
 -------------------
 
       home/                 contains all main work code what you can not get outer from server.
@@ -23,19 +24,21 @@ MY PROJECT STRUCTURE
       www/                  contains the entry script and Web resources      
 
 
+[Back to Contents](#contents)
 APPLICATION STRUCTURE
 -------------------
     
 For details about structure into application better look any [Yii2 doc](http://yiiframework.domain-na.me/doc/guide/2.0/ru "Yii2 docs at Russian Language")
 
 
+[Back to Contents](#contents)
 REQUIREMENTS
 ------------
 
 The minimum requirement by this application template that your Web server supports PHP 5.4.0.
 
 
-[UP](#contents)
+[Back to Contents](#contents)
 INSTALLATION:
 ------------
 
@@ -130,6 +133,7 @@ chmod 777 www/demo/sign-up/assets
 chmod 777 www/demo/sign-in/assets
 ~~~
 
+[Back to Contents](#contents)
 CONFIGURATION
 -------------
 
@@ -157,9 +161,10 @@ return [
 - Check and edit the other files in the `config/` directory to customize your application as required.
 
 
-
+[Back to Contents](#contents)
 Future changes
 ================================
 
 1) I want do and very little module with my own helper, so I will remove myLittleHelper and do that like a 3rd party
 into yii2/vendor, and that actually will req. for composer.
+[Back to Contents](#contents)
