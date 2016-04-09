@@ -11,7 +11,7 @@ Contents:
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
 5. [CONFIGURATION](#configuration)
-5.1. [Configuration of Database](#database)
+5-1. [Configuration of Database](#database)
 6. [Future changes](#future-changes)
 
 
@@ -46,11 +46,8 @@ INSTALLATION:
 ------------
 [Back to Contents](#contents)
 
-
 * 1) Create a dir where you want to create that project, on your taste.
-
-
-2) Use composer for get project:
+* 2) Use composer for get project:
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
@@ -70,7 +67,7 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 ~~~
 
 
-3) Install vendor or etc. with composer using the following command:
+* 3) Install vendor or etc. with composer using the following command:
 
 
 ~~~
@@ -89,7 +86,7 @@ $ composer global update fxp/composer-asset-plugin --no-plugins
 ~~~
 
 
-4) Create files for logs [optional - if you don't need this you can skip this step]
+* 4) Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
 
 ~~~
@@ -98,7 +95,7 @@ $ touch log/access.log|touch log/error.log
 ~~~
 
 
-5) Prepare your server.
+* 5) Prepare your server.
 Add domain to your host. I run my app at my local.
 I use it at my:
 
