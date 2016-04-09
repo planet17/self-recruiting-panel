@@ -10,11 +10,11 @@ Contents:
 2. [APPLICATION STRUCTURE](#application-structure)
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
-    1. [Create project's dir](#database)
-    2. [C](#database)
-    3. [C](#database)
-    4. [C](#database)
-    5. [C](#database)
+    1. [Create project's dir](#1-create-a-dir)
+    2. [Get project by composer](#2-get-project-by-composer)
+    3. [Install VENDOR by composer](#3-install-vendor-by-composer)
+    4. [Create log files (optional)](#4-create-log-files-optional)
+    5. [Prepare server](#5-prepare-server)
 5. [CONFIGURATION](#configuration)
     1. [Configuration of Database](#database)
 6. [Future changes](#future-changes)
@@ -54,9 +54,9 @@ INSTALLATION:
 ### 1) Create a dir.
 Create a dir where you want to create that project, on your taste.
 
-* 2) Use composer for get project:
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
+### 2) Get project by composer.
+Use composer for get project. If you do not have [Composer](http://getcomposer.org/), you may install it by following
+instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
 You can then install this application template using the following commands:
 
@@ -74,7 +74,8 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 ~~~
 
 
-* 3) Install vendor or etc. with composer using the following command:
+### 3) Install VENDOR by composer.
+Install vendor or etc. with composer using the following command:
 
 
 ~~~
@@ -85,7 +86,11 @@ $ cd ../..
 
 **NOTES:**
 If you get error with fxp like:
+
+~~~
 [ReflectionException] - Class Fxp\Composer\AssetPlugin\Repository\NpmRepository does not exist
+~~~
+
 Use following command to fix it:
 
 ~~~
@@ -93,7 +98,8 @@ $ composer global update fxp/composer-asset-plugin --no-plugins
 ~~~
 
 
-* 4) Create files for logs [optional - if you don't need this you can skip this step]
+### 4) Create log files [optional].
+Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
 
 ~~~
@@ -102,13 +108,15 @@ $ touch log/access.log|touch log/error.log
 ~~~
 
 
-* 5) Prepare your server.
-Add domain to your host. I run my app at my local.
+### 5) Prepare server.
+Prepare your server. Add domain to your host. I run my app at my local.
 I use it at my:
 
+~~~
 Ubuntu
 Server an Apache >= 2.4 or Nginx >= 1.4
 PHP >= 5.6
+~~~
 
 So as example add domain to my hosts:
 
