@@ -1,0 +1,41 @@
+# files with ~
+*~
+
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composers itself is not needed
+/composer.phar
+/home/yii2/composer.phar
+
+# composer vendor dirs
+/home/yii2/vendor/
+
+# Mac DS_Store Files
+.DS_Store
+
+# Vagrant stores
+.vagrant
+
+# log settings
+/log/
+
+# demo files
+/www/demo/
+/www/index-test.php
+/www/test.php
+
+
+# database and project settings
+/home/apps/sam-dark/minimal/config/main.php
