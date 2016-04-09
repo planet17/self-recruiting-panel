@@ -50,28 +50,48 @@ INSTALLATION:
 1) Create a dir where you want to create that project, on your taste.
 
 
-2) Create files for logs [optional - if you don't need this you can skip this step]
-You can create dir and files using the following command:
-
-~~~
-$ mkdir log
-$ touch log/access.log|touch log/error.log
-~~~
-
-
-3) Use composer for get template:
+2) Use composer for get template:
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
 You can then install this application template using the following command:
 
+Below command uses only one time:
+
 ~~~
 $ php composer global require "fxp/composer-asset-plugin:~1.1.0"
+~~~
+
+Below commands get project to your PC:
+
+~~~
 $ git init
-$ git clone https://github.com/planet17/yii-app-template.git .
+$ git clone https://github.com/planet17/self-recruiting-panel .
+~~~
+
+4) Get vendor or etc. by composer
+
+~~~
+$ cd home/yii2 
+$ php composer install
+~~~
+
+**NOTES:**
+If you get error with fxp like:
+[ReflectionException] - Class Fxp\Composer\AssetPlugin\Repository\NpmRepository does not exist
+Use it to fix it:
+
+~~~
+composer global update fxp/composer-asset-plugin --no-plugins
+~~~
 
 
-#composer create-project --prefer-dist --stability=dev samdark/yii2-minimal path/to/your/project
+3) Create files for logs [optional - if you don't need this you can skip this step]
+You can create dir and files using the following command:
+
+~~~
+$ mkdir log
+$ touch log/access.log|touch log/error.log
 ~~~
 
 
