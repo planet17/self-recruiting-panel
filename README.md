@@ -49,7 +49,14 @@ The minimum requirement by this application template that your Web server suppor
 
 INSTALLATION:
 ------------
+1. [Create project's dir](#1-create-a-dir)
+2. [Get project by composer](#2-get-project-by-composer)
+3. [Install VENDOR by composer](#3-install-vendor-by-composer)
+4. [Create log files (optional)](#4-create-log-files-optional)
+5. [Prepare server](#5-prepare-server)
+
 [Back to Contents](#contents)
+
 
 ### 1) Create a dir.
 Create a dir where you want to create that project, on your taste.
