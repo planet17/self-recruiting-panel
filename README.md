@@ -6,15 +6,18 @@ Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Mi
 
 Contents:
 -------------------
-1. [PROJECT STRUCTURE](my-project-structure)
+1. [PROJECT STRUCTURE](#my-project-structure-general)
 2. [APPLICATION STRUCTURE](#application-structure)
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
+5. [CONFIGURATION](#configuration)
+6. [Future changes](#future-changes)
 
 
-[Back to Contents](#contents)
 MY PROJECT STRUCTURE (general)
 -------------------
+[Back to Contents](#contents)
+
 
       home/                 contains all main work code what you can not get outer from server.
       home/apps/            contains all application.
@@ -24,23 +27,23 @@ MY PROJECT STRUCTURE (general)
       www/                  contains the entry script and Web resources      
 
 
-[Back to Contents](#contents)
 APPLICATION STRUCTURE
 -------------------
+[Back to Contents](#contents)
     
 For details about structure into application better look any [Yii2 doc](http://yiiframework.domain-na.me/doc/guide/2.0/ru "Yii2 docs at Russian Language")
 
 
-[Back to Contents](#contents)
 REQUIREMENTS
 ------------
+[Back to Contents](#contents)
 
 The minimum requirement by this application template that your Web server supports PHP 5.4.0.
 
 
-[Back to Contents](#contents)
 INSTALLATION:
 ------------
+[Back to Contents](#contents)
 
 
 1) Create a dir where you want to create that project, on your taste.
@@ -133,9 +136,10 @@ chmod 777 www/demo/sign-up/assets
 chmod 777 www/demo/sign-in/assets
 ~~~
 
-[Back to Contents](#contents)
+
 CONFIGURATION
 -------------
+[Back to Contents](#contents)
 
 ### Database
 
@@ -161,10 +165,13 @@ return [
 - Check and edit the other files in the `config/` directory to customize your application as required.
 
 
-[Back to Contents](#contents)
 Future changes
 ================================
+[Back to Contents](#contents)
 
 1) I want do and very little module with my own helper, so I will remove myLittleHelper and do that like a 3rd party
 into yii2/vendor, and that actually will req. for composer.
-[Back to Contents](#contents)
+
+
+================================
+[Back to Top](#self-recruiting-panel)
