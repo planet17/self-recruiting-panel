@@ -47,46 +47,49 @@ INSTALLATION:
 [Back to Contents](#contents)
 
 
-1) Create a dir where you want to create that project, on your taste.
+** 1) Create a dir where you want to create that project, on your taste. **
 
 
-2) Use composer for get template:
+2) Use composer for get project:
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-You can then install this application template using the following command:
+You can then install this application template using the following commands:
 
-Below command uses only one time:
+Following command uses only one time:
 
 ~~~
 $ php composer global require "fxp/composer-asset-plugin:~1.1.0"
 ~~~
 
-Below commands get project to your PC:
+Following commands get project to your PC:
 
 ~~~
 $ git init
 $ git clone https://github.com/planet17/self-recruiting-panel .
 ~~~
 
-4) Get vendor or etc. by composer
+
+3) Install vendor or etc. with composer using the following command:
+
 
 ~~~
 $ cd home/yii2 
 $ php composer install
+$ cd ../..
 ~~~
 
 **NOTES:**
 If you get error with fxp like:
 [ReflectionException] - Class Fxp\Composer\AssetPlugin\Repository\NpmRepository does not exist
-Use it to fix it:
+Use following command to fix it:
 
 ~~~
-composer global update fxp/composer-asset-plugin --no-plugins
+$ composer global update fxp/composer-asset-plugin --no-plugins
 ~~~
 
 
-3) Create files for logs [optional - if you don't need this you can skip this step]
+4) Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
 
 ~~~
@@ -95,7 +98,7 @@ $ touch log/access.log|touch log/error.log
 ~~~
 
 
-3) Prepare your server.
+6) Prepare your server.
 Add domain to your host. I run my app at my local.
 I use it at my:
 
@@ -105,14 +108,9 @@ PHP >= 5.6
 
 So as example add domain to my hosts:
 
-Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
-`www` directory.
 
-~~~
-localhost/
-~~~
 
-127.0.0.1	[http://domain.name]
+127.0.0.1	http://[domain.name]
 
 b) Example of my settings for Apache2:
 
@@ -128,6 +126,13 @@ b) Example of my settings for Apache2:
 </VirtualHost>
 
 * - About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
+
+Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
+`www` directory.
+
+~~~
+http://[domain.name]/
+~~~
 
 ///////////////////////////////////////////////////////////////////////////////
 
