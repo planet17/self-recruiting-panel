@@ -10,8 +10,13 @@ Contents:
 2. [APPLICATION STRUCTURE](#application-structure)
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
+    1. [Create project's dir](#database)
+    2. [C](#database)
+    3. [C](#database)
+    4. [C](#database)
+    5. [C](#database)
 5. [CONFIGURATION](#configuration)
-5-1. [Configuration of Database](#database)
+    1. [Configuration of Database](#database)
 6. [Future changes](#future-changes)
 
 
@@ -46,7 +51,9 @@ INSTALLATION:
 ------------
 [Back to Contents](#contents)
 
-* 1) Create a dir where you want to create that project, on your taste.
+### 1) Create a dir.
+Create a dir where you want to create that project, on your taste.
+
 * 2) Use composer for get project:
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
