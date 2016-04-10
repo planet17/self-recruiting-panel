@@ -33,3 +33,5 @@ Thumbs.db
 
 # public files
 /www/assets/
+/www/index-test.php
+/www/test.php
