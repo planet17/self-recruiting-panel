@@ -25,13 +25,17 @@
         "yii\\composer\\Installer::postCreateProject": {
                 "setPermission": [
                     {
-                        "../apps/my_yii2_application/runtime": "0777",
+                        "../apps/common/runtime": "0777",
+                        "../apps/web/runtime": "0777",
+                        "../apps/rest/runtime": "0777",
                         "../../www/assets": "0777",
                         "yii": "0755"
                     }
                 ],
                 "generateCookieValidationKey": [
-                    "../apps/my_yii2_application/config/main.dist.php"
+                    "../apps/common/config/main.php-dist",
+                    "../apps/web/config/main.php-dist",
+                    "../apps/api/config/main.php-dist"
                 ]
             },
             "asset-installer-paths": {
