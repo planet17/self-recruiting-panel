@@ -31,11 +31,5 @@ Thumbs.db
 # log settings
 /log/
 
-# demo files
-/www/demo/
-/www/index-test.php
-/www/test.php
-
-
-# database and project settings
-/home/apps/sam-dark/minimal/config/main.php
+# public files
+/www/assets/

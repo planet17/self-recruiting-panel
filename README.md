@@ -22,7 +22,7 @@ Contents:
 
 MY PROJECT STRUCTURE (general)
 -------------------
-[Back to Contents](#contents)
+[>> back to contents](#contents)
 
 
       home/                 contains all main work code what you can not get outer from server.
@@ -35,14 +35,14 @@ MY PROJECT STRUCTURE (general)
 
 APPLICATION STRUCTURES
 -------------------
-[Back to Contents](#contents)
+[>> back to contents](#contents)
     
 For details about structure into application better look any [Yii2 doc](http://yiiframework.domain-na.me/doc/guide/2.0/ru "Yii2 docs at Russian Language")
 
 
 REQUIREMENTS
 ------------
-[Back to Contents](#contents)
+[>> back to contents](#contents)
 
 The minimum requirement by this application template that your Web server supports PHP 5.4.0.
 
@@ -55,16 +55,16 @@ INSTALLATION:
 4. [Create log files (optional)](#4-create-log-files-optional)
 5. [Prepare server](#5-prepare-server)
 
-[Back to Contents](#contents)
+[>> back to contents](#contents)
 
 
 ### 1) Create a dir.
-[Back to Installation](#installation)
+[>> back to installation](#installation)
 
 Create a dir where you want to create that project, on your taste.
 
 ### 2) Get project by composer.
-[Back to Installation](#installation)
+[>> back to installation](#installation)
 
 Use composer for get project. If you do not have [Composer](http://getcomposer.org/), you may install it by following
 instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
@@ -86,7 +86,7 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 
 
 ### 3) Install VENDOR by composer.
-[Back to Installation](#installation)
+[>> back to installation](#installation)
 
 Install vendor or etc. with composer using the following command:
 
@@ -112,7 +112,7 @@ $ composer global update fxp/composer-asset-plugin --no-plugins
 
 
 ### 4) Create log files [optional].
-[Back to Installation](#installation)
+[>> back to installation](#installation)
 
 Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
@@ -124,7 +124,7 @@ $ touch log/access.log|touch log/error.log
 
 
 ### 5) Prepare server.
-[Back to Installation](#installation)
+[>> back to installation](#installation)
 
 Prepare your server. Add domain to your host. I run my app at my local.
 I use it at my:
@@ -138,7 +138,7 @@ PHP >= 5.6
 So as example add domain to my hosts:
 
 ~~~
-127.0.0.1	http://[domain.name]
+127.0.0.1	http://[my.domain.name]
 ~~~
 
 Use following command:
@@ -170,16 +170,15 @@ the following command:
 $ sudo gedit /etc/apache2/sites-enabled/000-default.conf
 ~~~
 
-
-
-
-Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
-`www` directory.
+c) And finally for preparing server you can restart it by following command:
 
 ~~~
-http://[domain.name]/
+$ sudo service apache2 restart
 ~~~
 
+
+### 6) Set permissions.
+[>> back to installation](#installation)
 Now setting of permission don\'t work automatically, so you need using the following command:
 
 ~~~
@@ -189,9 +188,11 @@ chmod 777 www/demo/sign-in/assets
 ~~~
 
 
+
+
 CONFIGURATION
 -------------
-[Back to Contents](#contents)
+[>> back to contents](#contents)
 
 ### DATABASE
 
@@ -212,12 +213,33 @@ return [
 - Yii won't create the database for you, this has to be done manually before you can access it.
 - Check and edit the other files in the `config/` directory to customize your application as required.
 
+Congratulations
+-------------
+[>> back to installation](#installation)
+
+Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
+`www` directory.
+
+~~~
+http://[my.domain.name]/
+~~~
+
+**NOTES:**
+- If you get an error 403 with htaccess while following URL, it is might be cause you download
+project by zip-archive or any other way, what is reason for wrong permission in project.
+Following command help you fix it:
+
+~~~
+$ sudo chmod -R 755 .
+~~~
+
+After used it, you must set permissions (Installation, item 6)
 
 Future changes
 ================================
-[Back to Contents](#contents)
+[>> back to contents](#contents)
 
 1) This item not from that projects.
 
 ================================
-[back to top](#self-recruiting-panel)
+[>> back to top](#self-recruiting-panel)
