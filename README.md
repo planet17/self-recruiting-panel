@@ -155,8 +155,8 @@ $ sudo gedit /etc/hosts
 b) Example of my settings for Apache2:
 
 <VirtualHost 127.0.0.1:80>
-	DocumentRoot `[path-to-the-dir]`/www
-		<Directory `[path-to-the-dir]`/www>
+	DocumentRoot [path-to-the-dir]/www
+		<Directory [path-to-the-dir]/www>
 			Options Indexes FollowSymlinks
 			AllowOverride All
 			Require all granted
@@ -165,7 +165,7 @@ b) Example of my settings for Apache2:
 	CustomLog [path-to-the-dir]/log/access.log combined
 </VirtualHost>
 
-* - About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
+* About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
 
 I use single file for all my setting of apache. I almost sure what you use other way to configuration. So be care,
 cause you might to do other actions. But anyway for example (If you need it). I write sets from above to the file from
