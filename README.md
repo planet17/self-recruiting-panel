@@ -20,6 +20,7 @@ Contents:
     7. [Create database](#7-create-database)
 5. [CONFIGURATION](#configuration)
     1. [Configuration of Database](#database)
+    2. [If deployed to production](#about-preparing-for-production)
 6. [Future changes](#future-changes)
 
 
@@ -301,4 +302,4 @@ Future changes
 ``Look `REQUIREMENTS.md` for that.``
 
 ================================
-[>> back to top](#self-recruiting-panel)
+`` [>> back to top<<](#self-recruiting-panel) ``
