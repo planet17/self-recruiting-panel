@@ -78,16 +78,16 @@ You can then install this application template using the following commands:
 
 Following command uses only one time, if you does not done that before:
 
-~~~
+```sh
 $ php composer global require "fxp/composer-asset-plugin:~1.1.0"
-~~~
+```
 
 Following commands downloading project to your directory:
 
-~~~
+```sh
 $ git init
 $ git clone https://github.com/planet17/self-recruiting-panel .
-~~~
+```
 
 
 ### 3) Install VENDOR by composer.
@@ -96,11 +96,11 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 Install vendor or etc. with composer using the following command:
 
 
-~~~
+```sh
 $ cd home/yii2 
 $ php composer install
 $ cd ../..
-~~~
+```
 
 **NOTES:**
 If you get error with fxp like:
@@ -111,9 +111,9 @@ If you get error with fxp like:
 
 Use following command to fix it:
 
-~~~
+```sh
 $ composer global update fxp/composer-asset-plugin --no-plugins
-~~~
+```
 
 
 ### 4) Create log files [optional].
@@ -122,10 +122,10 @@ $ composer global update fxp/composer-asset-plugin --no-plugins
 Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
 
-~~~
+```sh
 $ mkdir log
 $ touch log/access.log|touch log/error.log
-~~~
+```
 
 
 ### 5) Prepare server.
@@ -148,14 +148,14 @@ So as example add domain to my hosts:
 
 Use following command:
 
-~~~
+```sh
 $ sudo gedit /etc/hosts 
-~~~
+```
 
 b) Example of my settings for Apache2:
 
 
-```
+```apache_conf
 <VirtualHost 127.0.0.1:80>
 	DocumentRoot [path-to-the-dir]/www
 		<Directory [path-to-the-dir]/www>
@@ -175,15 +175,15 @@ I use single file for all my setting of apache. I almost sure what you use other
 So be care, cause you might to do other actions. But anyway for example (If you need it). I write sets from above
 to the file from the following command:
 
-~~~
+```sh
 $ sudo gedit /etc/apache2/sites-enabled/000-default.conf
-~~~
+```
 
 c) And finally for preparing server you can restart it by following command:
 
-~~~
+```sh
 $ sudo service apache2 restart
-~~~
+```
 
 
 ### 6) Set permissions.
@@ -191,12 +191,13 @@ $ sudo service apache2 restart
 Now setting of permission don\'t work automatically, so you need using the following command:
 
 TODO COMPLETE AFTER PROJECT WILL COMPLETELY FINISHED AT STRUCTURE LEVEL
-~~~
+
+```sh
 $ chmod 777 home/apps/common/runtime
 $ chmod 777 home/apps/web/runtime
 $ chmod 777 home/apps/api/runtime
 $ chmod 777 www/assets
-~~~
+```
 
 
 ### 7) Create database.
@@ -208,9 +209,9 @@ Any restrictions for that.
 
 Get access to database by following command:
 
-~~~
+```sh
 $ mysql -h localhost -u root -p
-~~~
+```
 
 Then into MySql console I use following commands:
 
@@ -224,10 +225,10 @@ quit
 
 TODO that item.
 
-~~~
+```sh
 $ yii migrate
 $ yii migrate/up 2
-~~~
+```
 
 CONFIGURATION
 -------------
@@ -286,8 +287,8 @@ project by zip-archive or any other way, what is reason for wrong permission in 
 Following command help you fix it:
 
 ```sh
-find ./ -type f -exec chmod 0644 {} \;
-find ./ -type d -exec chmod 0755 {} \;
+$ find ./ -type f -exec chmod 0644 {} \;
+$ find ./ -type d -exec chmod 0755 {} \;
 ```
 
 After used it, you might be need [set-up permissions](#6-set-permissions) again.
