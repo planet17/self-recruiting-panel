@@ -21,12 +21,13 @@ Contents:
 5. [CONFIGURATION](#configuration)
     1. [Configuration of Database](#database)
     2. [If deployed to production](#about-preparing-for-production)
-6. [Future changes](#future-changes)
+6. [Check your local web-site](#congratulations)
+7. [Future changes](#future-changes)
 
 
 MY PROJECT STRUCTURE (general)
 -------------------
-[>> back to contents](#contents)
+[>> back to contents <<](#contents)
 
 
       home/                 contains all main work code what you can not get outer from server.
@@ -39,14 +40,14 @@ MY PROJECT STRUCTURE (general)
 
 APPLICATION STRUCTURES
 -------------------
-[>> back to contents](#contents)
+[>> back to contents <<](#contents)
     
 For details about structure into application better look any [Yii2 doc](http://yiiframework.domain-na.me/doc/guide/2.0/ru "Yii2 docs at Russian Language")
 
 
 REQUIREMENTS
 ------------
-[>> back to contents](#contents)
+[>> back to contents <<](#contents)
 
 The minimum requirement by this application template that your Web server supports PHP 5.4.0.
 
@@ -61,16 +62,16 @@ INSTALLATION:
 6. [Set permissions](#6-set-permissions)
 7. [Create database](#7-create-database)
 
-[>> back to contents](#contents)
+[>> back to contents <<](#contents)
 
 
 ### 1) Create a dir.
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 
 Create a dir where you want to create that project, on your taste.
 
 ### 2) Get project by composer.
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 
 Use composer for get project. If you do not have [Composer](http://getcomposer.org/), you may install it by following
 instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
@@ -92,7 +93,7 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 
 
 ### 3) Install VENDOR by composer.
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 
 Install vendor or etc. with composer using the following command at `home/yii2` dir:
 
@@ -117,7 +118,7 @@ $ composer global update fxp/composer-asset-plugin --no-plugins
 
 
 ### 4) Create log files [optional].
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 
 Create files for logs [optional - if you don't need this you can skip this step]
 You can create dir and files using the following command:
@@ -129,7 +130,7 @@ $ touch log/access.log|touch log/error.log
 
 
 ### 5) Prepare server.
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 
 Prepare your server. Add domain to your host. I run my app at my local.
 I use it at my:
@@ -187,7 +188,7 @@ $ sudo service apache2 restart
 
 
 ### 6) Set permissions.
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 Now setting of permission don\'t work automatically, so you need using the following command:
 
 TODO COMPLETE AFTER PROJECT WILL COMPLETELY FINISHED AT STRUCTURE LEVEL
@@ -201,7 +202,7 @@ $ chmod 777 www/assets
 
 
 ### 7) Create database.
-[>> back to installation](#installation)
+[>> back to installation <<](#installation)
 
 I create database and user through bash, you can use any other way at your taste.
 For example I marked only password but you can change DATABASE NAME and USER too.
@@ -236,7 +237,7 @@ $ php yii migrate/up 2
 
 CONFIGURATION
 -------------
-[>> back to contents](#contents)
+[>> back to contents <<](#contents)
 
 ### DATABASE
 
@@ -276,7 +277,7 @@ And also you need set-up all other configuration file server-version what you wi
 
 Congratulations
 -------------
-[>> back to installation](#installation)
+[>> back to contents <<](#contents)
 
 Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
 `www` directory.
@@ -308,9 +309,10 @@ After used it, you might be need [set-up permissions](#6-set-permissions) again.
 
 Future changes
 ================================
-[>> back to contents](#contents)
+[>> back to contents <<](#contents)
 
 ``Look `REQUIREMENTS.md` for that.``
+
 
 ================================
 [>> back to top <<](#self-recruiting-panel)
