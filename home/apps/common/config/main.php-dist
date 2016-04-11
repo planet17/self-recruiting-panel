@@ -1,0 +1,73 @@
+<?php require_once('aliases.php');
+$params = array_merge(require(__DIR__ . '/params.php'));
+$db = YII_ENV_DEV ?
+    array_merge(require(__DIR__ . '/db-local.php')) :
+    array_merge(require(__DIR__ . '/db-server.php'));
+
+$config = [
+    'id' => 'planet17-ssi-template',
+    'name' => 'Template for Sign-in',
+    'basePath' => dirname(__DIR__),
+    'defaultRoute' => 'auth',
+    'controllerNamespace' => 'planet17\\ssi\\controllers',
+    'charset' => 'utf-8',
+    'bootstrap' => ['log'],
+    'vendorPath' => helpers_pl17_dir_get(__DIR__, 3, ['yii2', 'vendor']),
+    'components' => [
+        // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+        // as example iV191c3twL7D5cKP9sz8skmi2NGiWd3M
+        'request' => ['cookieValidationKey' => '<secret random string goes here>'],
+        'cache' => ['class' => 'yii\caching\FileCache'],
+        'user' => [
+            'loginUrl' => ['auth/in'],
+            'identityClass' => 'planet17\ssi\models\Auth\Models\User',
+            'enableAutoLogin' => true,
+        ],
+        'errorHandler' => ['errorAction' => 'default/error'],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
+        'db' => $db,
+        'formatter' => ['dateFormat' => 'MM dd, yyyy'],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                ['pattern' => '<controller>/<action>', 'route' => '<controller>/<action>']
+            ],
+        ],
+        /*
+         * !!! Be careful with jquery from Google, the now is available version 2.2.0
+         * But in the vendor after update version 2.2.1
+         */
+        'assetManager' => [
+            'class' => 'yii\web\AssetManager',
+            'bundles' => [
+                'yii\web\JqueryAsset' =>
+                    YII_ENV_DEV ?
+                        ['js' => ['jquery.js']] :
+                        [
+                            'sourcePath' => null,
+                            'js' => ['https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js']
+                        ]
+            ],
+        ],
+    ],
+    'params' => $params,
+    'aliases' => [
+        '@app' => dirname(__DIR__),
+        '@link-demo-in' => ('/demo/sign-in'),
+        '@path-demo-in' => ((Yii::getAlias('@path-www'))
+            . DIRECTORY_SEPARATOR . 'demo'
+            . DIRECTORY_SEPARATOR . 'sign-in'
+        )
+
+    ],
+];
+return $config;

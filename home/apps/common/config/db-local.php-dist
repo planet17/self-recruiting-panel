@@ -1,0 +1,8 @@
+<?php return [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=localhost;dbname=srp_db',
+    'username' => 'srp_manager',
+    'password' => '[your_password]',
+    'charset' => 'utf8',
+    'tablePrefix' => 'srp_'
+];
