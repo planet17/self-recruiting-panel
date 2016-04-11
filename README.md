@@ -203,7 +203,8 @@ $ chmod 777 www/assets
 [>> back to installation](#installation)
 
 I create database and user through bash, you can use any other way at your taste.
-For example I marked only password but you can change DATABASE NAME and USER too. Any restrictions for that.
+For example I marked only password but you can change DATABASE NAME and USER too.
+Any restrictions for that.
 
 Get access to database by following command:
 
@@ -284,7 +285,7 @@ http://[my.domain.name]/
 project by zip-archive or any other way, what is reason for wrong permission in project.
 Following command help you fix it:
 
-```bash
+```sh
 $ find ./ -type f -exec chmod 0644 {} \;
 $ find ./ -type d -exec chmod 0755 {} \;
 ```
