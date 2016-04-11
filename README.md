@@ -171,9 +171,9 @@ b) Example of my settings for Apache2:
 
 * About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
 
-``I use single file for all my setting of apache. I almost sure what you use other way to configuration.
+I use single file for all my setting of apache. I almost sure what you use other way to configuration.
 So be care, cause you might to do other actions. But anyway for example (If you need it). I write sets from above
-to the file from the following command:``
+to the file from the following command:
 
 ~~~
 $ sudo gedit /etc/apache2/sites-enabled/000-default.conf
