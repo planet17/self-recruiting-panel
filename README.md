@@ -286,8 +286,8 @@ project by zip-archive or any other way, what is reason for wrong permission in 
 Following command help you fix it:
 
 ```sh
-$ find ./ -type f -exec chmod 0644 {} \;
-$ find ./ -type d -exec chmod 0755 {} \;
+find ./ -type f -exec chmod 0644 {} \;
+find ./ -type d -exec chmod 0755 {} \;
 ```
 
 After used it, you might be need [set-up permissions](#6-set-permissions) again.
