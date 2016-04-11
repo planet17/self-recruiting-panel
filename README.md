@@ -213,13 +213,13 @@ $ mysql -h localhost -u root -p
 
 Then into MySql console I use following commands:
 
-~~~
+```sql
 CREATE DATABASE srp_db CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER 'srp_manager'@'localhost' IDENTIFIED BY '[your_password]';
 GRANT ALL PRIVILEGES ON srp_db . * TO 'srp_manager'@'localhost';
 FLUSH PRIVILEGES;
 quit
-~~~
+```
 
 TODO that item.
 
@@ -251,11 +251,11 @@ return [
 - Don't forget that instructions only about development version.
 When you need prepare project to PRODUCTION you need changes into `/www/index.php`, just comment following:
 
-~~~
+```php
 // comment out the following two lines when deployed to production
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
-~~~
+```
 
 And also you need set-up all other configuration file server-version what you will have:
 
