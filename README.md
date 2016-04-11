@@ -154,6 +154,8 @@ $ sudo gedit /etc/hosts
 
 b) Example of my settings for Apache2:
 
+
+```
 <VirtualHost 127.0.0.1:80>
 	DocumentRoot [path-to-the-dir]/www
 		<Directory [path-to-the-dir]/www>
@@ -164,6 +166,8 @@ b) Example of my settings for Apache2:
 	ErrorLog [path-to-the-dir]/log/error.log
 	CustomLog [path-to-the-dir]/log/access.log combined
 </VirtualHost>
+```
+
 
 * About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
 
