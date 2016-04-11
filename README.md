@@ -1,6 +1,7 @@
 Self Recruiting Panel
 ================================
 
+This is my pet project.
 Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Minimal from Yii2 developer")
 
 
@@ -14,7 +15,9 @@ Contents:
     2. [Get project by composer](#2-get-project-by-composer)
     3. [Install VENDOR by composer](#3-install-vendor-by-composer)
     4. [Create log files (optional)](#4-create-log-files-optional)
-    5. [Prepare server](#5-prepare-server)
+    5. [Prepare server](#5-prepare-server)    
+    6. [Set permissions](#6-set-permissions)
+    7. [Create database](#7-create-database)
 5. [CONFIGURATION](#configuration)
     1. [Configuration of Database](#database)
 6. [Future changes](#future-changes)
@@ -152,8 +155,8 @@ $ sudo gedit /etc/hosts
 b) Example of my settings for Apache2:
 
 <VirtualHost 127.0.0.1:80>
-	DocumentRoot [path-to-the-dir]/www
-		<Directory [path-to-the-dir]/www>
+	DocumentRoot `[path-to-the-dir]`/www
+		<Directory `[path-to-the-dir]`/www>
 			Options Indexes FollowSymlinks
 			AllowOverride All
 			Require all granted
@@ -282,7 +285,8 @@ $ find ./ -type f -exec chmod 0644 {} \;
 $ find ./ -type d -exec chmod 0755 {} \;
 ~~~
 
-After used it, you must set permissions (Installation, item 6)
+After used it, you might be need [set-up permissions](#6-set-permissions) again.
+
 
 Future changes
 ================================
