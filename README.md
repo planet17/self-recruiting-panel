@@ -94,13 +94,12 @@ $ git clone https://github.com/planet17/self-recruiting-panel .
 ### 3) Install VENDOR by composer.
 [>> back to installation](#installation)
 
-Install vendor or etc. with composer using the following command:
+Install vendor or etc. with composer using the following command at `home/yii2` dir:
 
 
 ```sh
 $ cd home/yii2 
 $ php composer install
-$ cd ../..
 ```
 
 **NOTES:**
@@ -225,10 +224,14 @@ quit
 ```
 
 TODO that item.
+Create all tables by migrates through Yii-console-application.
+Go to `home/yii2` and using the following Yii-command:
 
 ```sh
-$ yii migrate
-$ yii migrate/up 2
+$ cd home/yii2
+$ php yii migrate/new
+$ php yii migrate
+$ php yii migrate/up 2
 ```
 
 CONFIGURATION
@@ -281,6 +284,14 @@ Now you should be able to access the application through the following URL, assu
 ~~~
 http://[my.domain.name]/
 ~~~
+
+Login and password to panel:
+
+~~~
+lgn:    demo@demo
+pwd:    demodemo
+~~~
+
 
 **NOTES:**
 - If you get an error 403 with htaccess while following URL, it is might be cause you download
