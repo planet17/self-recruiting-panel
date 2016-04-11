@@ -76,13 +76,13 @@ instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#install
 
 You can then install this application template using the following commands:
 
-Following command uses only one time:
+Following command uses only one time, if you does not done that before:
 
 ~~~
 $ php composer global require "fxp/composer-asset-plugin:~1.1.0"
 ~~~
 
-Following commands get project to your PC:
+Following commands downloading project to your directory:
 
 ~~~
 $ git init
@@ -171,9 +171,9 @@ b) Example of my settings for Apache2:
 
 * About add an ErrorLog and CustomLog is optional, so if you don't create logs dir above...
 
-I use single file for all my setting of apache. I almost sure what you use other way to configuration. So be care,
-cause you might to do other actions. But anyway for example (If you need it). I write sets from above to the file from
-the following command:
+``I use single file for all my setting of apache. I almost sure what you use other way to configuration.
+So be care, cause you might to do other actions. But anyway for example (If you need it). I write sets from above
+to the file from the following command:``
 
 ~~~
 $ sudo gedit /etc/apache2/sites-enabled/000-default.conf
