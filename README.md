@@ -302,4 +302,4 @@ Future changes
 ``Look `REQUIREMENTS.md` for that.``
 
 ================================
-`` [>> back to top<<](#self-recruiting-panel) ``
+[>> back to top <<](#self-recruiting-panel)
