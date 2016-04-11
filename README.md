@@ -185,7 +185,9 @@ Now setting of permission don\'t work automatically, so you need using the follo
 
 TODO COMPLETE AFTER PROJECT WILL COMPLETELY FINISHED AT STRUCTURE LEVEL
 ~~~
-$ chmod 777 home/apps/my_yii2_application/runtime
+$ chmod 777 home/apps/common/runtime
+$ chmod 777 home/apps/web/runtime
+$ chmod 777 home/apps/api/runtime
 $ chmod 777 www/assets
 ~~~
 
@@ -276,7 +278,8 @@ project by zip-archive or any other way, what is reason for wrong permission in 
 Following command help you fix it:
 
 ~~~
-$ sudo chmod -R 755 .
+$ find ./ -type f -exec chmod 0644 {} \;
+$ find ./ -type d -exec chmod 0755 {} \;
 ~~~
 
 After used it, you must set permissions (Installation, item 6)
