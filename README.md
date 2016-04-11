@@ -54,6 +54,8 @@ INSTALLATION:
 3. [Install VENDOR by composer](#3-install-vendor-by-composer)
 4. [Create log files (optional)](#4-create-log-files-optional)
 5. [Prepare server](#5-prepare-server)
+6. [Set permissions](#6-set-permissions)
+7. [Create database](#7-create-database)
 
 [>> back to contents](#contents)
 
@@ -181,14 +183,41 @@ $ sudo service apache2 restart
 [>> back to installation](#installation)
 Now setting of permission don\'t work automatically, so you need using the following command:
 
+TODO COMPLETE AFTER PROJECT WILL COMPLETELY FINISHED AT STRUCTURE LEVEL
 ~~~
-chmod 777 home/apps/my_yii2_application/runtime | chmod 777 home/apps/my_yii2_application/runtime
-chmod 777 www/demo/sign-up/assets
-chmod 777 www/demo/sign-in/assets
+$ chmod 777 home/apps/my_yii2_application/runtime
+$ chmod 777 www/assets
 ~~~
 
 
+### 7) Create database.
+[>> back to installation](#installation)
 
+I create database and user through bash, you can use any other way at your taste.
+For example I marked only password but you can change DATABASE NAME and USER too. Any restrictions for that.
+
+Get access to database by following command:
+
+~~~
+$ mysql -h localhost -u root -p
+~~~
+
+Then into MySql console I use following commands:
+
+~~~
+CREATE DATABASE srp_db CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE USER 'srp_manager'@'localhost' IDENTIFIED BY '[your_password]';
+GRANT ALL PRIVILEGES ON srp_db . * TO 'srp_manager'@'localhost';
+FLUSH PRIVILEGES;
+quit
+~~~
+
+TODO that item.
+
+~~~
+$ yii migrate
+$ yii migrate/up 2
+~~~
 
 CONFIGURATION
 -------------
@@ -196,17 +225,34 @@ CONFIGURATION
 
 ### DATABASE
 
-Edit the file `config/db.php` with real data, for example:
+You need rename file `/home/apps/common/config/db-local.php-dist`, to `php` extension.
+Also edit this file with real data, for example:
 
 ```php
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2minimal',
-    'username' => 'root',
-    'password' => '1234',
+    'dsn' => 'mysql:host=localhost;dbname=srp_db',
+    'username' => 'srp_manager',
+    'password' => '[your_password]',
     'charset' => 'utf8',
 ];
 ```
+
+### ABOUT PREPARING FOR PRODUCTION
+- Don't forget that instructions only about development version.
+When you need prepare project to PRODUCTION you need changes into `/www/index.php`, just comment following:
+
+~~~
+// comment out the following two lines when deployed to production
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
+~~~
+
+And also you need set-up all other configuration file server-version what you will have:
+
+1. `/home/apps/common/config/db-server.php`
+
+
 
 **NOTES:**
 - All command work relatively to root-dir of project. I usually use terminal into my IDE, so I don't need to write a full path.
@@ -239,7 +285,7 @@ Future changes
 ================================
 [>> back to contents](#contents)
 
-1) This item not from that projects.
+Look `REQUIREMENTS.md` for that.
 
 ================================
 [>> back to top](#self-recruiting-panel)
