@@ -284,10 +284,10 @@ http://[my.domain.name]/
 project by zip-archive or any other way, what is reason for wrong permission in project.
 Following command help you fix it:
 
-~~~
+```bash
 $ find ./ -type f -exec chmod 0644 {} \;
 $ find ./ -type d -exec chmod 0755 {} \;
-~~~
+```
 
 After used it, you might be need [set-up permissions](#6-set-permissions) again.
 
@@ -296,7 +296,7 @@ Future changes
 ================================
 [>> back to contents](#contents)
 
-Look `REQUIREMENTS.md` for that.
+``Look `REQUIREMENTS.md` for that.``
 
 ================================
 [>> back to top](#self-recruiting-panel)
