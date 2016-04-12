@@ -1,11 +1,13 @@
 <?php /** User: planet17 Date: 12.04.16 Time: 19:39 */
-namespace apps\common\commands;
+namespace apps\common\components;
+use yii\base\ErrorException;
 use yii\db\Migration;
 class ExtMigration extends Migration
 {
-    const tableName = 'tableName';
-    public static function getTableName($prefix = true, $stringConcat = null)
+    protected $tableName = null;
+    protected function getTableName($prefix = true, $stringConcat = null)
     {
-        return $prefix ? '{{%' . self::tableName . ( $stringConcat !== null ? $stringConcat : "" ) . '}}' : self::tableName;
+        if (is_null($this->tableName)) { throw new ErrorException("Undefined properties tableName"); }
+        return $prefix ? '{{%' . $this->tableName . ( $stringConcat !== null ? $stringConcat : "" ) . '}}' : $this->tableName;
     }
 }
