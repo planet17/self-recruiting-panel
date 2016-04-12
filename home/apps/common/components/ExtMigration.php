@@ -5,9 +5,24 @@ use yii\db\Migration;
 class ExtMigration extends Migration
 {
     protected $tableName = null;
+
     protected function getTableName($prefix = true, $stringConcat = null)
     {
-        if (is_null($this->tableName)) { throw new ErrorException("Undefined properties tableName"); }
-        return $prefix ? '{{%' . $this->tableName . ( $stringConcat !== null ? $stringConcat : "" ) . '}}' : $this->tableName;
+        if (is_null($this->tableName)) {
+            throw new ErrorException('Undefined properties tableName');
+        }
+        return $prefix ? '{{%' . $this->tableName . ($stringConcat !== null ? '_' . $stringConcat : '') . '}}' : $this->tableName;
+    }
+
+    protected function helperAddForeignKey($tableName, $fieldName, $foreignTableName, $foreignFieldName = 'id')
+    {
+        $this->createIndex($fieldName . '_ifk', $tableName, $fieldName);
+        $this->addForeignKey($fieldName . '_ifk', $tableName, $fieldName, $foreignTableName, $foreignFieldName,
+            'CASCADE', 'CASCADE');
+    }
+
+    protected function helperAddIndexes($tableName, $fieldName)
+    {
+        $this->createIndex($fieldName . '_idx', $tableName, $fieldName);
     }
 }
