@@ -1,8 +1,8 @@
-<?php require_once( __DIR__ . DIRECTORY_SEPARATOR . 'aliases.php');
+<?php require_once( __DIR__ . DIRECTORY_SEPARATOR . 'aliases-presetting.php');
 $db = true ?
     array_merge(require(__DIR__ . '/db-local.php')) :
     array_merge(require(__DIR__ . '/db-server.php'));
-/*$params = require(__DIR__ . '/params.php');*/
+$params = array_merge(require(__DIR__ . '/params.php'));
 
 return [
     'id' => 'srp-console',
@@ -23,5 +23,5 @@ return [
         ],
         'db' => $db,
     ],
-    /*'params' => $params,*/
+    'params' => $params,
 ];
