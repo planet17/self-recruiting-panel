@@ -232,7 +232,6 @@ Go to `home/yii2` and using the following Yii-command:
 $ cd home/yii2
 $ php yii migrate/new
 $ php yii migrate
-$ php yii migrate/up 2
 ```
 
 CONFIGURATION
