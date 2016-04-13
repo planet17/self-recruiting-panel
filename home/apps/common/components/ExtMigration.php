@@ -14,10 +14,10 @@ class ExtMigration extends Migration
         return $prefix ? '{{%' . $this->tableName . ($stringConcat !== null ? '_' . $stringConcat : '') . '}}' : $this->tableName;
     }
 
-    protected function helperAddForeignKey($tableName, $fieldName, $foreignTableName, $foreignFieldName = 'id')
+    protected function helperAddForeignKey($tableName, $fieldName, $foreignTableName, $foreignFieldName = 'id', $addForIfk = '')
     {
-        $this->createIndex($fieldName . '_ifk', $tableName, $fieldName);
-        $this->addForeignKey($fieldName . '_ifk', $tableName, $fieldName, $foreignTableName, $foreignFieldName,
+        $this->createIndex($fieldName . '_ifk_' . $addForIfk, $tableName, $fieldName);
+        $this->addForeignKey($fieldName . '_ifk_' . $addForIfk, $tableName, $fieldName, $foreignTableName, $foreignFieldName,
             'CASCADE', 'CASCADE');
     }
 
