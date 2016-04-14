@@ -1,15 +1,11 @@
 Self Recruiting Panel
 ================================
 
-This is my pet project.
-Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Minimal from Yii2 developer")
-
-### TODO: CHECK LISTS BELOW
-
 ### What is this repository for? ###
 
-* Quick summary
-* Version
+* `This is my pet project.
+Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Minimal from Yii2 developer")`
+* `Have no version`
 
 
 ### How do I get set up? ###
@@ -21,6 +17,7 @@ Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Mi
 * How to run tests
 * Deployment instructions
 
+
 Contents:
 -------------------
 1. [PROJECT STRUCTURE](#my-project-structure-general)
@@ -28,8 +25,8 @@ Contents:
 3. [REQUIREMENTS](#requirements)
 4. [INSTALLATION](#installation)
     1. [Create project's dir](#1-create-a-dir)
-    2. [Get project by composer](#2-get-project-by-composer)
-    3. [Install VENDOR by composer](#3-install-vendor-by-composer)
+    2. [Get project via git](#2-get-project-via-git)
+    3. [Install vendor via composer](#3-install-vendor-via-composer)
     4. [Create log files (optional)](#4-create-log-files-optional)
     5. [Prepare server](#5-prepare-server)    
     6. [Set permissions](#6-set-permissions)
@@ -71,8 +68,8 @@ The minimum requirement by this application template that your Web server suppor
 INSTALLATION:
 ------------
 1. [Create project's dir](#1-create-a-dir)
-2. [Get project by composer](#2-get-project-by-composer)
-3. [Install VENDOR by composer](#3-install-vendor-by-composer)
+2. [Get project via git](#2-get-project-via-git)
+3. [Install vendor via composer](#3-install-vendor-via-composer)
 4. [Create log files (optional)](#4-create-log-files-optional)
 5. [Prepare server](#5-prepare-server)
 6. [Set permissions](#6-set-permissions)
@@ -86,33 +83,28 @@ INSTALLATION:
 
 Create a dir where you want to create that project, on your taste.
 
-### 2) Get project by composer.
+### 2) Get project via git.
 [>> back to installation <<](#installation)
 
-Use composer for get project. If you do not have [Composer](http://getcomposer.org/), you may install it by following
-instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
-
-You can then install this application template using the following commands:
-
-Following command uses only one time, if you does not done that before:
-
-```sh
-$ php composer global require "fxp/composer-asset-plugin:~1.1.0"
-```
-
-Following commands downloading project to your directory:
+Following commands will downloading project to your directory:
 
 ```sh
 $ git init
 $ git clone https://github.com/planet17/self-recruiting-panel .
 ```
 
+### 3) Install vendor via Composer.
 
-### 3) Install VENDOR by composer.
-[>> back to installation <<](#installation)
+Use composer for get vendor part of project. If you do not have [Composer](http://getcomposer.org/), you may install
+it by following instructions at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-Install vendor or etc. with composer using the following command at `home/yii2` dir:
+After installing Composer, run the following command to install the Composer Asset Plugin:
 
+```sh
+$ php composer global require "fxp/composer-asset-plugin:~1.1.0"
+```
+
+If you have Composer and Plugin yet, then just install vendor via composer using the following command at `home/yii2` dir: 
 
 ```sh
 $ cd home/yii2 
