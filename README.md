@@ -3,9 +3,9 @@ Self Recruiting Panel
 
 ### What is this repository for? ###
 
-* `This is my pet project.
-Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Minimal from Yii2 developer")`
-* `Have no version`
+* This is my pet project.
+Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Minimal from Yii2 developer")
+* Have no version
 
 
 ### How do I get set up? ###
