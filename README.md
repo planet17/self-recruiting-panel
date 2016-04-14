@@ -4,6 +4,22 @@ Self Recruiting Panel
 This is my pet project.
 Project based at [Yii2 Minimal](https://github.com/samdark/yii2-minimal "Yii2 Minimal from Yii2 developer")
 
+### TODO: CHECK LISTS BELOW
+
+### What is this repository for? ###
+
+* Quick summary
+* Version
+
+
+### How do I get set up? ###
+
+* Summary of set up
+* Configuration
+* Dependencies
+* Database configuration
+* How to run tests
+* Deployment instructions
 
 Contents:
 -------------------
